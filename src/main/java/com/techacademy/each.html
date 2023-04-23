@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial of Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{/css/each.css}">
+</head>
+<body>
+    <h1>Thymeleaf Page</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>性別</th>
+            <th>年齢</th>
+        </tr>
+        <tr th:each="data : ${obj}">
+            <td th:text="${data.id}"></td>
+            <td th:text="${data.name}"></td>
+            <td th:text="${data.gender}"></td>
+            <td th:text="${data.age}"></td>
+        </tr>
+    </table>
+</body>
+</html>

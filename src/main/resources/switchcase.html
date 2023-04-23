@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial of Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{/css/obj.css}">
+</head>
+<body>
+    <h1>Thymeleaf Page</h1>
+    <div th:switch="${val}">
+        <p th:case="1" th:text="SPRING"></p>
+        <p th:case="2" th:text="SUMMER"></p>
+        <p th:case="3" th:text="AUTUMN"></p>
+        <p th:case="4" th:text="WINTER"></p>
+        <p th:case="*">＜該当なし＞</p>
+    </div>
+</body>
+</html>

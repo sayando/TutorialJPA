@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial of Thymeleaf</title>
+    <link rel="stylesheet" th:href="@{/css/obj.css}">
+</head>
+<body>
+    <h1>Thymeleaf Page</h1>
+    <p th:if="${val1} ge ${val2}" th:text="'val1(' + ${val1} + ') は val2(' + ${val2} + ') 以上です。(th:if)'">th:if</p>
+    <p th:unless="${val1} eq ${val2}" th:text="'val1(' + ${val1} + ') と val2(' + ${val2} + ') は 不一致です。(th:unless)'">th:unless</p>
+</body>
+</html>
