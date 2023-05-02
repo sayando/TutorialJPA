@@ -7,10 +7,13 @@
 <body>
     <h1>Country 削除</h1>
     <p>削除する国のコードを指定してください。</p>
-    <form action="#" th:action="@{/country/list}" method="get">
-        <input type="text" name="code" th:value="${code}">
+    <form action="#" method="post" th:action="@{/country/delete}">
+        <table th:object="${country}">
+            <tr><th>コード</th><td><input name="code" th:value="${code}" ></td></tr>
+        </table>
         <button type="submit">送信</button>
+        <a th:href="@{'/country/list'}">一覧に戻る</a>
+        
     </form>
-    <input type="submit" value="一覧に戻る" />
 </body>
 </html>
